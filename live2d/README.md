@@ -32,17 +32,21 @@ Add Live2D widget to web page. Compatible with PJAX.
 
 本插件需要 Font Awesome 4.7.0 支持，请确保相关样式表已在页面中加载，例如在 `<head>` 中加入：  
 Font Awesome 4.7.0 is required for this plugin. You can add this to `<head>`:
+
 ```xml
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
 ```
+
 否则无法正常显示。（如果网页中已经加载了 Font Awesome，就不要重复加载了）
 
 ## 使用 Usage
 
 将这一行代码加入 `<head>` 或 `<body>`，即可展现出效果：
+
 ```xml
 <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
 ```
+
 如果网站启用了 PJAX，由于看板娘不必每页刷新，因此要注意将相关脚本放到 PJAX 刷新区域之外。
 
 换句话说，如果你是小白，或者只需要最基础的功能，就只用把这一行代码，连同前面加载 Font Awesome 的一行代码，一起放到 html 的 `<head>` 中即可。  
@@ -54,9 +58,11 @@ Font Awesome 4.7.0 is required for this plugin. You can add this to `<head>`:
 ### Using CDN
 
 要自定义有关内容，可以把这个仓库 Fork 一份，然后进行修改。这时，使用方法对应地变为
+
 ```xml
 <script src="https://cdn.jsdelivr.net/gh/username/live2d-widget@latest/autoload.js"></script>
 ```
+
 将 `username` 替换为你的 GitHub 用户名即可。
 
 ### Self-host
@@ -64,6 +70,7 @@ Font Awesome 4.7.0 is required for this plugin. You can add this to `<head>`:
 你也可以直接把这些文件放到服务器上，而不是通过 CDN 加载。
 
 - 如果你能够通过 `ssh` 访问你的主机，请把整个仓库克隆到服务器上。执行：
+  
   ```bash
   cd /path/to/your/webroot
   # Clone this repository
@@ -75,18 +82,24 @@ Font Awesome 4.7.0 is required for this plugin. You can add this to `<head>`:
 这样，整个项目就可以通过你的服务器 IP 或者域名从公网访问了。不妨试试能否正常地通过浏览器打开 `autoload.js` 和 `live2d.min.js` 等文件，并确认这些文件的内容是正确的，没有出现乱码。  
 一切正常的话，接下来修改一些配置就行了。（需要通过服务器上的文本编辑器修改；你也可以先在本地完成这一步骤，再上传到服务器上）  
 修改 `autoload.js` 中的常量 `live2d_path` 为 `live2d-widget` 这一文件夹在公网上的路径。比如说，如果你能够通过
+
 ```
 https://www.example.com/path/to/live2d-widget/live2d.min.js
 ```
+
 访问到 `live2d.min.js`，那么就把 `live2d_path` 的值修改为
+
 ```
 https://www.example.com/path/to/live2d-widget/
 ```
+
 路径末尾的 `/` 一定要加上。具体可以参考 `autoload.js` 内的注释。  
 完成后，在你要添加看板娘的界面加入
+
 ```xml
 <script src="https://www.example.com/path/to/live2d-widget/autoload.js"></script>
 ```
+
 就可以加载了。
 
 ## 目录结构 Files
