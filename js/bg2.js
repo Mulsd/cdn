@@ -1,4 +1,8 @@
 var xiaokang = new xkTool("transparent");
+xiaokang.codeFull();
+xiaokang.bgPage(
+    "https://ae01.alicdn.com/kf/H21b5f6b8496141a1979a33666e1074d9x.jpg",
+);
 // 设置随机背景的图片
 xiaokang.imgList = [
     "https://ae01.alicdn.com/kf/H21b5f6b8496141a1979a33666e1074d9x.jpg",

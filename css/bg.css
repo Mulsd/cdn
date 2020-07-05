@@ -1,6 +1,6 @@
 #web_bg {
     /* 背景图像的地址（url括号里）  */
-    background: url();
+    background: url("https://ae01.alicdn.com/kf/H21b5f6b8496141a1979a33666e1074d9x.jpg", "https://ae01.alicdn.com/kf/Hb4b6a83a124049819bd561439312edc96.jpg", "https://ae01.alicdn.com/kf/H146b0a3e074a4e91b11fcce994098034y.jpg", "https://ae03.alicdn.com/kf/H76674cd5901840be9b12f8596bb649bdP.jpg", );
     /* 背景图像不重复 */
     background-repeat: no-repeat;
     /* 背景图像大小 */
